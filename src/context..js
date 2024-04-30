@@ -8,7 +8,7 @@ const URL = "https://openlibrary.org/search.json?q="
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-    const [searchTerm, setSearchTerm] = useState("the death of ivan ilytch")
+    const [searchTerm, setSearchTerm] = useState("Death of Ivan Ilyich")
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [resultQuery, setResultQuery] = useState("");
@@ -18,8 +18,36 @@ const AppProvider = ({ children }) => {
         try {
             const response = await fetch (`${URL}${searchTerm}`);
             const data = await response.json();
-            console.log(data);
+            //console.log(data);
             const {docs} = data;
+            //console.log(docs)
+
+            if (docs) {
+                const newBooks = docs.slice(0, 20).map((bookSingle) => {
+                    const {key, author_name, cover_i, edition_count, first_publisher_year, title} = bookSingle;
+
+                    return {
+                        id: key,
+                        author: author_name,
+                        cover_id: cover_i,
+                        edition_count: edition_count,
+                        first_publisher_year: first_publisher_year,
+                        title: title
+                    }
+                });
+                setBooks(newBooks);
+
+                if(newBooks.length > 1){
+                    setResultQuery("Your Result");
+                } else {
+                    setResultQuery("No Result")
+                }
+            } else {
+                setBooks([]);
+                setResultQuery("No Result")
+            }
+            setLoading(false);
+
         } catch (error) {
             console.log(error);
             setLoading(false);
