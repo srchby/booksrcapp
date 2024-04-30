@@ -6,7 +6,7 @@ import { useGlobalContext } from '../../context.';
 import "./SearchForm.css"
 
 const SearchForm = () => {
-  const { setSearchTerm, setResultQuery } = useGlobalContext();
+  const { setSearchTerm, setResultTitle } = useGlobalContext();
   const searchText = useRef("");
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const SearchForm = () => {
     let tempSearchTerm = searchText.current.value.trim();
     if ((tempSearchTerm.replace(/[^\w\s]/gi, "")).length === 0) {
       setSearchTerm("death of ivan ilyich");
-      setResultQuery("Please Enter Something ...");
+      setResultTitle("Please Enter Something ...");
     } else {
       setSearchTerm(searchText.current.value);
     }
