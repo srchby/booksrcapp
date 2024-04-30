@@ -8,6 +8,7 @@ import {
   Routes,
   BrowserRouter
 } from "react-router-dom";
+import { AppProvider } from "./context.";
 import "./index.css";
 import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
@@ -16,6 +17,7 @@ import BookList from "./components/BookList/BookList"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <AppProvider>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />}>
@@ -24,5 +26,6 @@ root.render(
         <Route path="/booklist/:id" element={<BookDetails />} />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter> 
+  </AppProvider>
 );
