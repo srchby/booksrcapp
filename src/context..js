@@ -5,10 +5,11 @@ import React, {
 } from "react";
 import { useCallback } from "react";
 const URL = "https://openlibrary.org/search.json?q="
+
 const AppContext = React.createContext();
 
 const AppProvider = ({children}) => {
-    const [searchTerm, setSearchTerm] = useState("the lost world");
+    const [searchTerm, setSearchTerm] = useState("Death of Ivan Ilyich");
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [resultTitle, setResultTitle] = useState("");
