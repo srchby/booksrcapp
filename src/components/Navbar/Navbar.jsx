@@ -6,26 +6,26 @@ const Navbar = () => {
 
   return (
     <nav className='navbar' id='navbar'>
-      <div className='brand-and-toggler flex flex-sb'>
+      <div className='brand-and-toggler flex-nav flex-sb'>
         <span className='text-uppercase fw-7 fs-27'>
           BookSrcApp
         </span>
-      </div>
-
-      <div>
-        <ul>
+        <div>
+        <ul className='flex-nav'>
           <li>
-            <Link to="booklist" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>
+            <Link to="booklist" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1 margin-sides'>
               Home
             </Link>
           </li>
           <li>
-            <Link to="about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>
+            <Link to="about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1 margin-sides'>
               About
             </Link>
           </li>
         </ul>
       </div>
+      </div>
+      
     </nav>
   )
 }
