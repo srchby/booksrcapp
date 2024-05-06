@@ -9,11 +9,11 @@ const Header = () => {
       <header className='header'>
         <Navbar />
         <div className='header-content flex flex-c text-center text'>
-            <h3 className='header-title text-capitalize'>
-                Find books
+            <h3 className='header-title text-capitalize margin-h'>
+                booksrcapp
             </h3>
             <p className='header-text fs-18 fw-3'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+            Simple React JS website that uses the OpenLibrary API, Project made by srchby.
             </p>   
             <SearchForm />
         </div>

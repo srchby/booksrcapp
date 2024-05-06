@@ -24,8 +24,8 @@ const BookList = () => {
   return (
     <section className='booklist'>
       <div className='container'>
-        <div className='section-title'>
-          Booklist
+        <div className='section-title text-uppercase fs-26 fw-6 ls-1'>
+          Books based on your search:
         </div>
         <div className='booklist-content grid'>
           { 
