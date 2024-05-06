@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className='navbar' id='navbar'>
       <div className='brand-and-toggler flex-nav flex-sb'>
-        <span className='text-uppercase fw-7 fs-27'>
+        <span className='text-uppercase fw-6 fs-22'>
           BookSrcApp
         </span>
         <div>

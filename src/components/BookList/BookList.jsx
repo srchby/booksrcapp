@@ -3,6 +3,7 @@ import { useGlobalContext } from "../../context."
 import Book from "./Book.jsx"
 import Loading from "../Loader/Loader"
 import coverimg from "../../images/08957d0ec9098630a9d667daf415517c.jpg_750x750.png.png"
+import "../BookList/Booklist.css"
 
 //https://covers.openlibrary.org/b/id/240727-S.jpg
 

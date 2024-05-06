@@ -5,7 +5,9 @@ import './Loader.css';
 const Loader = () => {
   return (
     <div className='loader flex flex-c'>
-      <img alt='Loader' src={Loaderimg}/>
+      <div className='title text-uppercase fw-6 fs-22'>
+        Loading...
+      </div>
     </div>
   )
 }
